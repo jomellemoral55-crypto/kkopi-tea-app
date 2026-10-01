@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#2b1a12" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="phase2.css" />
+    <title>Menu | KKOPI.Tea</title>
+  </head>
+  <body data-page="menu">
+    <header class="nav">
+      <div class="container nav-in">
+        <a class="logo" href="menuphase2.html">KKOPI<span>.Tea</span></a>
+        <nav class="nav-links" aria-label="Main">
+          <a class="pill" href="../home.html">Home</a>
+          <a class="pill active" href="menuphase2.html">Menu</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="icon-btn" id="cartBtn" type="button" aria-label="Cart">
+            🛒<span class="badge" id="cartCount" hidden>0</span>
+          </button>
+          <button
+            class="icon-btn"
+            id="profileBtn"
+            type="button"
+            aria-label="Profile"
+          >
+            👤
+          </button>
+        </div>
+        <label class="search"
+          ><span aria-hidden="true">🔍</span
+          ><input
+            id="searchInput"
+            type="search"
+            placeholder="Search drinks and snacks..."
+            aria-label="Search"
+        /></label>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="intro">
+        <h1>Get your drinks now</h1>
+        <p>Pick a category or search your favorite drink.</p>
+      </section>
+
+      <!-- Categories (built by phase2.js) -->
+      <section aria-label="Categories">
+        <div class="cats" id="categories"></div>
+      </section>
+
+      <!-- Best sellers -->
+      <section id="bestSection">
+        <div class="sec-head"><h2>Best sellers</h2></div>
+        <div class="scroller" id="bestGrid"></div>
+      </section>
+
+      <!-- All products -->
+      <section id="products">
+        <div class="sec-head">
+          <h2 id="productsTitle">All drinks</h2>
+          <span class="count" id="productCount"></span>
+        </div>
+        <div class="grid" id="productGrid"></div>
+        <p class="empty" id="emptyMsg" hidden>
+          No items found. Try another word or category.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        &copy; 2026 KKOPI.Tea. Kapasigan Pasig City, PH
+      </div>
+    </footer>
+    <script src="phase2.js"></script>
+  </body>
+</html>

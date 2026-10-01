@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2b1a12">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="phase3.css">
+  <title>Your Cart | KKOPI.Tea</title>
+</head>
+<body data-page="cart">
+  <header class="nav">
+    <div class="container nav-in">
+      <a class="logo" href="../home.html">KKOPI<span>.Tea</span></a>
+      <nav class="nav-links" aria-label="Main">
+        <a class="pill" href="../home.html">Home</a>
+        <a class="pill" href="../phase2/menuphase2.html">Menu</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="icon-btn" href="cartphase3.html" aria-label="Cart">🛒<span class="badge" id="cartCount" hidden>0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Your Cart</h1>
+
+    <!-- Filled by phase3.js -->
+    <div class="layout" id="cartLayout">
+      <section id="cartList" aria-label="Cart items"></section>
+
+      <aside class="summary glass" id="cartSummary" aria-label="Order summary">
+        <h2>Order summary</h2>
+        <dl class="totals">
+          <div><dt>Subtotal</dt><dd id="subtotal"></dd></div>
+          <div><dt>Service fee</dt><dd id="serviceFee"></dd></div>
+          <div class="grand"><dt>Grand total</dt><dd id="grandTotal"></dd></div>
+        </dl>
+        <div class="stack">
+          <a class="btn" href="checkoutphase3.html">Proceed to Checkout</a>
+          <a class="btn btn-ghost" href="../phase2/menuphase2.html">Continue Shopping</a>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Empty cart state -->
+    <section class="empty glass" id="emptyCart" hidden>
+      <svg viewBox="0 0 120 130" width="140" role="img" aria-label="Empty cup">
+        <rect x="66" y="6" width="9" height="40" rx="4.5" transform="rotate(14 70 26)" fill="#b98155"/>
+        <path d="M22 40h76l-10 80a8 8 0 0 1-8 7H40a8 8 0 0 1-8-7z" fill="#eadbc8" stroke="#6f4a32" stroke-width="3" stroke-linejoin="round"/>
+        <rect x="16" y="30" width="88" height="13" rx="6.5" fill="#6f4a32"/>
+        <circle cx="48" cy="80" r="4" fill="#2b1a12"/><circle cx="72" cy="80" r="4" fill="#2b1a12"/>
+        <path d="M48 102q12-10 24 0" fill="none" stroke="#2b1a12" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <h2>Your cart is empty</h2>
+      <p>Looks like you haven't picked a drink yet.</p>
+      <a class="btn" href="../phase2/menuphase2.html">Return to Menu</a>
+    </section>
+  </main>
+
+  <script src="phase3.js"></script>
+</body>
+</html>

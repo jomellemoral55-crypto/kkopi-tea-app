@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#2b1a12" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="phase3.css" />
+    <title>Checkout | KKOPI.Tea</title>
+  </head>
+  <body data-page="checkout">
+    <header class="nav">
+      <div class="container nav-in">
+        <a class="logo" href="../home.html">KKOPI<span>.Tea</span></a>
+        <nav class="nav-links" aria-label="Main">
+          <a class="pill" href="../home.html">Home</a>
+          <a class="pill" href="../phase2/menuphase2.html">Menu</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="icon-btn" href="cartphase3.html" aria-label="Cart"
+            >🛒<span class="badge" id="cartCount" hidden>0</span></a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1 class="page-title">Checkout</h1>
+
+      <form class="layout" id="checkoutForm" novalidate>
+        <div class="col">
+          <!-- Customer information -->
+          <section class="panel glass">
+            <h2>Customer information</h2>
+            <div class="field">
+              <label for="fullName">Full name</label
+              ><input
+                id="fullName"
+                name="fullName"
+                data-rule="name"
+                autocomplete="name"
+              />
+              <p class="error"></p>
+            </div>
+            <div class="field">
+              <label for="phone">Contact number</label
+              ><input
+                id="phone"
+                name="phone"
+                type="tel"
+                data-rule="phone"
+                autocomplete="tel"
+                placeholder="09171234567"
+              />
+              <p class="error"></p>
+            </div>
+            <div class="field">
+              <label for="email">Email address</label
+              ><input
+                id="email"
+                name="email"
+                type="email"
+                data-rule="email"
+                autocomplete="email"
+              />
+              <p class="error"></p>
+            </div>
+          </section>
+
+          <!-- Delivery method -->
+          <section class="panel glass">
+            <h2>Delivery method</h2>
+            <div class="opts">
+              <label class="opt"
+                ><input
+                  type="radio"
+                  name="method"
+                  value="Pickup"
+                  checked
+                /><span>🏪 Pickup</span></label
+              >
+              <label class="opt"
+                ><input type="radio" name="method" value="Delivery" /><span
+                  >🛵 Delivery</span
+                ></label
+              >
+            </div>
+            <div id="deliveryFields" hidden>
+              <div class="field">
+                <label for="address">Address</label
+                ><input
+                  id="address"
+                  name="address"
+                  data-rule="address"
+                  autocomplete="street-address"
+                />
+                <p class="error"></p>
+              </div>
+              <div class="field">
+                <label for="landmark">Landmark</label
+                ><input
+                  id="landmark"
+                  name="landmark"
+                  placeholder="Near the 7-Eleven, blue gate..."
+                />
+              </div>
+            </div>
+          </section>
+
+          <!-- Payment -->
+          <section class="panel glass">
+            <h2>Payment method</h2>
+            <div class="opts">
+              <label class="opt"
+                ><input type="radio" name="payment" value="Cash" checked /><span
+                  >💵 Cash</span
+                ></label
+              >
+              <label class="opt"
+                ><input type="radio" name="payment" value="GCash" /><span
+                  >GCash</span
+                ></label
+              >
+              <label class="opt"
+                ><input type="radio" name="payment" value="Maya" /><span
+                  >Maya</span
+                ></label
+              >
+              <label class="opt"
+                ><input
+                  type="radio"
+                  name="payment"
+                  value="Credit/Debit Card"
+                /><span>💳 Credit/Debit Card</span></label
+              >
+            </div>
+            <p class="note" id="payNote"></p>
+          </section>
+        </div>
+
+        <!-- Order summary -->
+        <aside class="summary glass" aria-label="Order summary">
+          <h2>Order summary</h2>
+          <ul class="sum-items" id="sumItems"></ul>
+          <dl class="totals">
+            <div>
+              <dt>Subtotal</dt>
+              <dd id="subtotal"></dd>
+            </div>
+            <div>
+              <dt>Service fee</dt>
+              <dd id="serviceFee"></dd>
+            </div>
+            <div class="grand">
+              <dt>Grand total</dt>
+              <dd id="grandTotal"></dd>
+            </div>
+          </dl>
+          <div class="stack">
+            <button class="btn" type="submit" id="placeOrder">
+              Place Order
+            </button>
+            <a class="btn btn-ghost" href="cartphase3.html">Back to Cart</a>
+          </div>
+        </aside>
+      </form>
+    </main>
+
+    <script src="phase3.js"></script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="KKOPI.Tea - milk tea and coffee, brewed your way."
+    />
+    <meta name="theme-color" content="#2b1a12" />
+    <title>KKOPI.Tea</title>
+
+    <!-- Emoji favicon (no extra file needed) -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧋</text></svg>"
+    />
+
+    <!-- Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Fallback kung naka-off ang JavaScript -->
+    <noscript
+      ><meta http-equiv="refresh" content="3;url=login.html"
+    /></noscript>
+  </head>
+  <body data-page="splash">
+    <main class="splash">
+      <span class="orb o1"></span><span class="orb o2"></span
+      ><span class="orb o3"></span>
+
+      <div class="splash-card glass">
+        <!-- Milk tea cup: fills up while loading -->
+        <svg
+          class="cup-art"
+          viewBox="0 0 120 170"
+          role="img"
+          aria-label="Milk tea cup filling up"
+        >
+          <defs>
+            <clipPath id="cupClip">
+              <path d="M22 48h76l-10 108a6 6 0 0 1-6 5H38a6 6 0 0 1-6-5z" />
+            </clipPath>
+          </defs>
+          <rect
+            class="straw"
+            x="68"
+            y="4"
+            width="9"
+            height="52"
+            rx="4.5"
+            transform="rotate(12 72 30)"
+          />
+          <path
+            class="cup-body"
+            d="M22 48h76l-10 108a6 6 0 0 1-6 5H38a6 6 0 0 1-6-5z"
+          />
+          <g clip-path="url(#cupClip)">
+            <rect class="tea" x="0" y="48" width="120" height="120" />
+            <circle class="pearl p1" cx="46" cy="148" r="6" />
+            <circle class="pearl p2" cx="62" cy="150" r="6" />
+            <circle class="pearl p3" cx="78" cy="148" r="6" />
+            <circle class="pearl p4" cx="54" cy="138" r="6" />
+            <circle class="pearl p5" cx="70" cy="138" r="6" />
+          </g>
+          <rect class="lid" x="16" y="38" width="88" height="12" rx="6" />
+          <path class="shine" d="M34 62l6 84" />
+        </svg>
+
+        <div class="logo">KKOPI<span>.Tea</span></div>
+        <p class="tagline">Milk tea, brewed your way</p>
+        <div
+          class="loader"
+          role="progressbar"
+          aria-label="Loading KKOPI.Tea"
+        ></div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

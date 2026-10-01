@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#2b1a12" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="phase4.css" />
+    <!-- Apply saved dark mode before first paint (no flash) -->
+    <script>
+      try {
+        if (JSON.parse(localStorage.getItem('kkopi_settings')).dark)
+          document.documentElement.dataset.theme = 'dark';
+      } catch (e) {}
+    </script>
+    <title>Profile | KKOPI.Tea</title>
+  </head>
+  <body data-page="profile">
+    <header class="nav">
+      <div class="container nav-in">
+        <a class="logo" href="../home.html">KKOPI<span>.Tea</span></a>
+        <nav class="nav-links" aria-label="Main">
+          <a class="pill" href="../home.html">Home</a>
+          <a class="pill" href="../phase2/menuphase2.html">Menu</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="icon-btn" href="../phase3/cartphase3.html" aria-label="Cart"
+            >🛒<span class="badge" id="cartCount" hidden>0</span></a
+          >
+          <a
+            class="icon-btn active"
+            href="profilephase4.html"
+            aria-label="Profile"
+            >👤</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1 class="page-title">My Account</h1>
+      <nav class="tabs" aria-label="Account">
+        <a class="tab active" href="profilephase4.html" aria-current="page"
+          >Profile</a
+        ><a class="tab" href="favoritesphase4.html">Favorites</a
+        ><a class="tab" href="orderhistoryphase4.html">Orders</a
+        ><a class="tab" href="settingsphase4.html">Settings</a>
+      </nav>
+
+      <!-- Profile header (filled by phase4.js) -->
+      <section class="profile-hero glass">
+        <div class="avatar-wrap">
+          <div class="avatar" id="avatar" aria-label="Profile picture"></div>
+          <button
+            class="cam"
+            id="photoBtn"
+            type="button"
+            aria-label="Change profile picture"
+          >
+            📷
+          </button>
+          <input type="file" id="photoInput" accept="image/*" hidden />
+        </div>
+        <div class="hero-text">
+          <h2 id="pName"></h2>
+          <p id="pEmail"></p>
+          <p class="muted">Member since <span id="pSince"></span></p>
+        </div>
+      </section>
+
+      <section class="stats" aria-label="Your stats">
+        <div class="stat glass">
+          <strong id="statOrders">0</strong><span>Total orders</span>
+        </div>
+        <div class="stat glass">
+          <strong id="statFavs">0</strong><span>Favorites</span>
+        </div>
+        <div class="stat glass">
+          <strong id="statDrink">-</strong><span>Favorite drink</span>
+        </div>
+      </section>
+
+      <section class="panel glass">
+        <h2>Personal details</h2>
+        <dl class="info">
+          <div>
+            <dt>Full name</dt>
+            <dd id="dName"></dd>
+          </div>
+          <div>
+            <dt>Email</dt>
+            <dd id="dEmail"></dd>
+          </div>
+          <div>
+            <dt>Contact number</dt>
+            <dd id="dPhone"></dd>
+          </div>
+          <div>
+            <dt>Address</dt>
+            <dd id="dAddress"></dd>
+          </div>
+        </dl>
+      </section>
+
+      <div class="actions-grid">
+        <button class="btn" id="editBtn" type="button">Edit Profile</button>
+        <a class="btn btn-ghost" href="orderhistoryphase4.html">My Orders</a>
+        <a class="btn btn-ghost" href="favoritesphase4.html">Favorites</a>
+        <a class="btn btn-ghost" href="settingsphase4.html">Settings</a>
+        <button class="btn btn-danger" id="logoutBtn" type="button">
+          Logout
+        </button>
+      </div>
+    </main>
+
+    <script src="phase4.js"></script>
+  </body>
+</html>

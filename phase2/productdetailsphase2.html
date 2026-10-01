@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#2b1a12" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="phase2.css" />
+    <title>Product Details | KKOPI.Tea</title>
+  </head>
+  <body data-page="details">
+    <header class="nav">
+      <div class="container nav-in">
+        <a class="logo" href="menuphase2.html">KKOPI<span>.Tea</span></a>
+        <nav class="nav-links" aria-label="Main">
+          <a class="pill" href="../home.html">Home</a>
+          <a class="pill active" href="menuphase2.html">Menu</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="icon-btn" id="cartBtn" type="button" aria-label="Cart">
+            🛒<span class="badge" id="cartCount" hidden>0</span>
+          </button>
+          <button
+            class="icon-btn"
+            id="profileBtn"
+            type="button"
+            aria-label="Profile"
+          >
+            👤
+          </button>
+        </div>
+        <label class="search"
+          ><span aria-hidden="true">🔍</span
+          ><input
+            id="searchInput"
+            type="search"
+            placeholder="Search drinks and snacks..."
+            aria-label="Search"
+        /></label>
+      </div>
+    </header>
+
+    <main class="container" id="detail" aria-live="polite">
+      <p class="empty">Loading...</p>
+    </main>
+
+    <script src="phase2.js"></script>
+  </body>
+</html>

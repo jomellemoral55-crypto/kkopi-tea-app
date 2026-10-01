@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">KKopi.Tea</string>
+    <string name="title_activity_main">KKopi.Tea</string>
+    <string name="package_name">com.kkopitea.app</string>
+    <string name="custom_url_scheme">com.kkopitea.app</string>
+</resources>

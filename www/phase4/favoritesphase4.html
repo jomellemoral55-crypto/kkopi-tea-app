@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2b1a12">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="phase4.css">
+  <!-- Apply saved dark mode before first paint (no flash) -->
+  <script>try{if(JSON.parse(localStorage.getItem("kkopi_settings")).dark)document.documentElement.dataset.theme="dark"}catch(e){}</script>
+  <title>Favorites | KKOPI.Tea</title>
+</head>
+<body data-page="favorites">
+  <header class="nav">
+    <div class="container nav-in">
+      <a class="logo" href="../home.html">KKOPI<span>.Tea</span></a>
+      <nav class="nav-links" aria-label="Main">
+        <a class="pill" href="../home.html">Home</a>
+        <a class="pill" href="../phase2/menuphase2.html">Menu</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="icon-btn" href="../phase3/cartphase3.html" aria-label="Cart">🛒<span class="badge" id="cartCount" hidden>0</span></a>
+        <a class="icon-btn active" href="profilephase4.html" aria-label="Profile">👤</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">My Favorites</h1>
+    <nav class="tabs" aria-label="Account"><a class="tab" href="profilephase4.html">Profile</a><a class="tab active" href="favoritesphase4.html" aria-current="page">Favorites</a><a class="tab" href="orderhistoryphase4.html">Orders</a><a class="tab" href="settingsphase4.html">Settings</a></nav>
+
+    <p class="muted count" id="favCount"></p>
+    <div class="grid" id="favGrid"></div>
+
+    <!-- Empty state -->
+    <section class="empty glass" id="favEmpty" hidden>
+      <svg viewBox="0 0 120 120" width="130" role="img" aria-label="Empty heart">
+        <path d="M60 104C24 78 12 56 12 40a24 24 0 0 1 48-6 24 24 0 0 1 48 6c0 16-12 38-48 64z" fill="#eadbc8" stroke="#6f4a32" stroke-width="3" stroke-linejoin="round"/>
+        <circle cx="46" cy="52" r="3.500" fill="#2b1a12"/><circle cx="74" cy="52" r="3.500" fill="#2b1a12"/>
+        <path d="M48 70q12-9 24 0" fill="none" stroke="#2b1a12" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <h2>No favorite drinks yet.</h2>
+      <p>Tap the heart on any drink to save it here.</p>
+      <a class="btn" href="../phase2/menuphase2.html">Browse Menu</a>
+    </section>
+  </main>
+
+  <script src="phase4.js"></script>
+</body>
+</html>

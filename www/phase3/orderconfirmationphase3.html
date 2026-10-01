@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2b1a12">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="phase3.css">
+  <title>Order Confirmed | KKOPI.Tea</title>
+</head>
+<body data-page="confirm">
+  <header class="nav">
+    <div class="container nav-in">
+      <a class="logo" href="../home.html">KKOPI<span>.Tea</span></a>
+      <nav class="nav-links" aria-label="Main">
+        <a class="pill" href="../home.html">Home</a>
+        <a class="pill" href="../phase2/menuphase2.html">Menu</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="icon-btn" href="cartphase3.html" aria-label="Cart">🛒<span class="badge" id="cartCount" hidden>0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="success glass" id="successCard">
+      <svg class="check" viewBox="0 0 100 100" width="120" role="img" aria-label="Success">
+        <circle class="check-bg" cx="50" cy="50" r="44"/>
+        <path class="check-mark" d="M30 52l14 14 27-30"/>
+      </svg>
+      <h1>Order Successfully Placed</h1>
+      <p class="thanks">Thank you, <span id="custName"></span>! We're preparing your drinks.</p>
+
+      <dl class="details">
+        <div><dt>Order number</dt><dd id="orderId"></dd></div>
+        <div><dt>Date</dt><dd id="orderDate"></dd></div>
+        <div id="etaRow"><dt id="etaLabel">Estimated pickup</dt><dd id="orderEta"></dd></div>
+        <div><dt>Payment</dt><dd id="orderPay"></dd></div>
+        <div><dt>Total</dt><dd id="orderTotal"></dd></div>
+      </dl>
+
+      <div class="stack row">
+        <button class="btn btn-ghost" type="button" id="trackBtn">Track Order</button>
+        <a class="btn" href="../home.html">Back to Home</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="phase3.js"></script>
+</body>
+</html>

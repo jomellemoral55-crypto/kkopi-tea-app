@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#2b1a12" />
+    <title>KKopi tea</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧋</text></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="home">
+    <!-- ===== NAVBAR ===== -->
+    <header class="nav">
+      <div class="container nav-in">
+        <a class="logo" href="home.html">KKOPI<span>.Tea</span></a>
+        <nav class="nav-links" aria-label="Main">
+          <a href="home.html">Home</a>
+          <a href="phase2/menuphase2.html">Menu</a>
+          <a href="#promos">Promos</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <label class="search">
+          <span aria-hidden="true">🔍</span>
+          <input
+            id="searchInput"
+            type="search"
+            placeholder="Search milk tea, coffee..."
+            aria-label="Search"
+          />
+        </label>
+        <a class="btn" href="login.html">Log out</a>
+
+        <!-- Account menu: links to Phase 4 -->
+        <details class="account">
+          <summary aria-label="Account menu">👤</summary>
+          <div class="account-menu">
+            <a href="phase4/profilephase4.html">👤 Profile</a>
+            <a href="phase4/favoritesphase4.html">♥ Favorites</a>
+            <a href="phase4/orderhistoryphase4.html">🧾 Order History</a>
+            <a href="phase4/settingsphase4.html">⚙️ Settings</a>
+          </div>
+        </details>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- ===== HERO ===== -->
+      <section class="hero">
+        <h1>Brewed slow. Sipped happy.</h1>
+        <p>
+          Creamy milk tea and rich coffee, made fresh and ready when you are.
+        </p>
+        <a class="btn btn-light" href="phase2/menuphase2.html">View menu</a>
+        <div class="cup" aria-hidden="true">🧋</div>
+      </section>
+
+      <!-- ===== FEATURED ===== -->
+      <section id="featured">
+        <div class="sec-head">
+          <h2>Featured milk tea</h2>
+          <a href="phase2/menuphase2.html">See all</a>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <div class="pic" data-emoji="🧋">
+              <img
+                src="https://res.cloudinary.com/dtz0urit6/image/upload/q_auto:best,f_jpg/cloudinary-tools-uploads/efnilpajmqqmqgktq80m"
+                alt="Classic Milk Tea"
+                loading="lazy"
+                onerror="this.remove()"
+              />
+            </div>
+            <h3>Classic Milk Tea</h3>
+            <small>Black tea, creamy milk</small>
+            <div class="price">
+              <span>₱89</span>
+              <button
+                class="add"
+                type="button"
+                aria-label="Add Classic Milk Tea"
+              >
+                +
+              </button>
+            </div>
+          </article>
+          <article class="card">
+            <div class="pic" data-emoji="🍯">
+              <img
+                src="https://res.cloudinary.com/dtz0urit6/image/upload/q_auto:best,f_jpg/cloudinary-tools-uploads/vq0e8xui6h8thhw9ig9q"
+                alt="Brown Sugar Boba"
+                loading="lazy"
+                onerror="this.remove()"
+              />
+            </div>
+            <h3>Brown Sugar Boba</h3>
+            <small>Tiger stripes, chewy pearls</small>
+            <div class="price">
+              <span>₱119</span>
+              <button
+                class="add"
+                type="button"
+                aria-label="Add Brown Sugar Boba"
+              >
+                +
+              </button>
+            </div>
+          </article>
+          <article class="card">
+            <div class="pic" data-emoji="🍵">
+              <img
+                src="https://res.cloudinary.com/dtz0urit6/image/upload/q_auto:best,f_jpg/cloudinary-tools-uploads/nja0cd7iwcjl1wogz0sy"
+                alt="Matcha Latte"
+                loading="lazy"
+                onerror="this.remove()"
+              />
+            </div>
+            <h3>Matcha Latte</h3>
+            <small>Ceremonial matcha</small>
+            <div class="price">
+              <span>₱129</span>
+              <button class="add" type="button" aria-label="Add Matcha Latte">
+                +
+              </button>
+            </div>
+          </article>
+          <article class="card">
+            <div class="pic" data-emoji="🍫">
+              <img
+                src="images/choco-hazelnut.jpg"
+                alt="Choco Hazelnut"
+                loading="lazy"
+                onerror="this.remove()"
+              />
+            </div>
+            <h3>Choco Hazelnut</h3>
+            <small>Rich cocoa, nutty finish</small>
+            <div class="price">
+              <span>₱109</span>
+              <button class="add" type="button" aria-label="Add Choco Hazelnut">
+                +
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== CATEGORIES ===== -->
+      <section id="categories">
+        <div class="sec-head"><h2>Categories</h2></div>
+        <div class="cats">
+          <button class="chip active">Milk Tea</button>
+          <button class="chip">Coffee</button>
+          <button class="chip">Fruit Tea</button>
+          <button class="chip">Matcha</button>
+          <button class="chip">Frappe</button>
+          <button class="chip">Add-ons</button>
+        </div>
+      </section>
+
+      <!-- ===== BEST SELLERS ===== -->
+      <section id="best">
+        <div class="sec-head">
+          <h2>Best sellers</h2>
+          <a href="phase2/menuphase2.html">See all</a>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <div class="pic" data-emoji="☕">
+              <img
+                src="images/caramel-macchiato.jpg"
+                alt="Caramel Macchiato"
+                loading="lazy"
+                onerror="this.remove()"
+              />
+            </div>
+            <h3>Caramel Macchiato</h3>
+            <small>Espresso, caramel, milk</small>
+            <div class="price">
+              <span>₱139</span>
+              <button
+                class="add"
+                type="button"
+                aria-label="Add Caramel Macchiato"
+              >
+                +
+              </button>
+            </div>
+          </article>
+          <article class="card">
+            <div class="pic" data-emoji="🍓">
+              <img
+                src="https://res.cloudinary.com/dtz0urit6/image/upload/q_auto:best,f_jpg/cloudinary-tools-uploads/qqzwwkljvkfyqf4dpaea"
+                alt="Vanilla Latte"
+                loading="lazy"
+                onerror="this.remove()"
+              />
+            </div>
+            <h3>Vanilla Milktea</h3>
+            <small>strong, creamy</small>
+            <div class="price">
+              <span>₱99</span>
+              <button
+                class="add"
+                type="button"
+                aria-label="Add Vanilla Milk Tea"
+              >
+                +
+              </button>
+            </div>
+          </article>
+          <article class="card">
+            <div class="pic" data-emoji="🥥">
+              <img
+                src="images/okinawa-milk-tea.jpg"
+                alt="Okinawa Milk Tea"
+                loading="lazy"
+                onerror="this.remove()"
+              />
+            </div>
+            <h3>Okinawa Milk Tea</h3>
+            <small>Roasted brown sugar</small>
+            <div class="price">
+              <span>₱105</span>
+              <button
+                class="add"
+                type="button"
+                aria-label="Add Okinawa Milk Tea"
+              >
+                +
+              </button>
+            </div>
+          </article>
+          <article class="card">
+            <div class="pic" data-emoji="🍪">
+              <img
+                src="https://res.cloudinary.com/dtz0urit6/image/upload/q_auto:best,f_jpg/cloudinary-tools-uploads/fpioxhk3br8yyqewuvnd"
+                alt="Cookies &amp; Cream"
+                loading="lazy"
+                onerror="this.remove()"
+              />
+            </div>
+            <h3>Cookies &amp; Cream</h3>
+            <small>Blended, with crumbs</small>
+            <div class="price">
+              <span>₱125</span>
+              <button
+                class="add"
+                type="button"
+                aria-label="Add Cookies &amp; Cream"
+              >
+                +
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== PROMOTIONS ===== -->
+      <section id="promos">
+        <div class="sec-head"><h2>Promotions</h2></div>
+        <div class="promos">
+          <div class="promo">
+            <h3>Buy 1 Get 1 Tuesday</h3>
+            <p>On all classic milk tea, every Tuesday.</p>
+          </div>
+          <div class="promo dark">
+            <h3>Free pearls for new members</h3>
+            <p>Sign up and add pearls on your first order.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== START ORDERING ===== -->
+      <div class="cta">
+        <button class="btn btn-xl" id="startOrdering" type="button">
+          Start Ordering
+        </button>
+      </div>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="contact">
+      <div class="container">
+        <div class="foot-grid">
+          <div>
+            <div class="logo">KKOPI<span>.Tea</span></div>
+            <p>Milk tea and coffee, made fresh daily.</p>
+          </div>
+          <div>
+            <strong>Explore</strong><br /><a href="home.html">Home</a><br /><a
+              href="phase2/menuphase2.html"
+              >Menu</a
+            ><br /><a href="#promos">Promos</a>
+          </div>
+          <div>
+            <strong>Contact</strong><br />Quezon City, PH<br />hello@kkopi.tea
+          </div>
+        </div>
+        <p class="copy">
+          &copy; 2026 KKOPI.Tea. All rights reserved. &middot;
+          <a href="phase5/adminloginphase5.html">Admin</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- =====================================================================
+         MENU CATALOG: all 19 menu items. NOT shown on this page.
+         phase2/menuphase2.html reads this list. To add, edit or remove an item,
+         change it here. data-image = image URL or path (leave "" for the built-in drawing).
+         Categories: milk, fruit, coffee, matcha, hot, snack
+         ===================================================================== -->
+    <section id="catalog" hidden aria-hidden="true">
+      <article
+        class="product"
+        data-id="classic-milk-tea"
+        data-category="milk"
+        data-price="89"
+        data-rating="4.8"
+        data-best="true"
+        data-emoji="🥤"
+        data-image="https://res.cloudinary.com/dtz0urit6/image/upload/q_auto:best,f_jpg/cloudinary-tools-uploads/efnilpajmqqmqgktq80m"
+      >
+        <h3>Classic Milk Tea</h3>
+        <p>Black tea, creamy milk</p>
+      </article>
+      <article
+        class="product"
+        data-id="brown-sugar-boba"
+        data-category="milk"
+        data-price="119"
+        data-rating="4.9"
+        data-best="true"
+        data-emoji="🥤"
+        data-image="https://res.cloudinary.com/dtz0urit6/image/upload/q_auto:best,f_jpg/cloudinary-tools-uploads/vq0e8xui6h8thhw9ig9q"
+      >
+        <h3>Brown Sugar Boba</h3>
+        <p>Tiger stripes, chewy pearls</p>
+      </article>
+      <article
+        class="product"
+        data-id="okinawa-milk-tea"
+        data-category="milk"
+        data-price="105"
+        data-rating="4.7"
+        data-best="true"
+        data-emoji="🥤"
+        data-image="https://res.cloudinary.com/dtz0urit6/image/upload/q_auto:best,f_jpg/cloudinary-tools-uploads/zfcmfnqacvtivrbvcmsi"
+      >
+        <h3>Okinawa Milk Tea</h3>
+        <p>Roasted brown sugar</p>
+      </article>
+      <article
+        class="product"
+        data-id="strawberry-milk-tea"
+        data-category="milk"
+        data-price="99"
+        data-rating="4.6"
+        data-best="false"
+        data-emoji="🍓"
+        data-image=""
+      >
+        <h3>Strawberry cheesu</h3>
+        <p>Fresh, fruity, creamy</p>
+      </article>
+      <article
+        class="product"
+        data-id="cookies-and-cream"
+        data-category="milk"
+        data-price="125"
+        data-rating="4.7"
+        data-best="false"
+        data-emoji="🍪"
+        data-image="https://res.cloudinary.com/dtz0urit6/image/upload/q_auto:best,f_jpg/cloudinary-tools-uploads/gflqgrz9b24yjl9pdhyc"
+      >
+        <h3>Cookies &amp; Cream</h3>
+        <p>Blended, with crumbs</p>
+      </article>
+      <article
+        class="product"
+        data-id="taro-milk-tea"
+        data-category="milk"
+        data-price="99"
+        data-rating="4.5"
+        data-best="false"
+        data-emoji="🥤"
+        data-image=""
+      >
+        <h3>Taro Milk Tea</h3>
+        <p>Smooth, nutty taro</p>
+      </article>
+      <article
+        class="product"
+        data-id="mango-green-tea"
+        data-category="fruit"
+        data-price="95"
+        data-rating="4.6"
+        data-best="false"
+        data-emoji="🥭"
+        data-image=""
+      >
+        <h3>Mango Green Tea</h3>
+        <p>Jasmine tea, ripe mango</p>
+      </article>
+      <article
+        class="product"
+        data-id="passionfruit-cooler"
+        data-category="fruit"
+        data-price="99"
+        data-rating="4.5"
+        data-best="false"
+        data-emoji="🍹"
+        data-image=""
+      >
+        <h3>Passionfruit Cooler</h3>
+        <p>Tangy, refreshing, iced</p>
+      </article>
+      <article
+        class="product"
+        data-id="lychee-black-tea"
+        data-category="fruit"
+        data-price="95"
+        data-rating="4.4"
+        data-best="false"
+        data-emoji="🍹"
+        data-image=""
+      >
+        <h3>Lychee Black Tea</h3>
+        <p>Floral lychee, black tea</p>
+      </article>
+      <article
+        class="product"
+        data-id="caramel-macchiato"
+        data-category="coffee"
+        data-price="139"
+        data-rating="4.8"
+        data-best="true"
+        data-emoji="☕"
+        data-image="https://res.cloudinary.com/dtz0urit6/image/upload/q_auto:best,f_jpg/cloudinary-tools-uploads/eg3q1ec4og5aaaxch8rv"
+      >
+        <h3>Caramel Macchiato</h3>
+        <p>Espresso, caramel, milk</p>
+      </article>
+      <article
+        class="product"
+        data-id="spanish-latte"
+        data-category="coffee"
+        data-price="129"
+        data-rating="4.7"
+        data-best="false"
+        data-emoji="☕"
+        data-image="https://res.cloudinary.com/dtz0urit6/image/upload/q_auto:best,f_jpg/cloudinary-tools-uploads/ocmlamyxqc6z1rutdp2h"
+      >
+        <h3>Winter Melon</h3>
+        <p>Sweet condensed milk latte</p>
+      </article>
+      <article
+        class="product"
+        data-id="iced-americano"
+        data-category="coffee"
+        data-price="99"
+        data-rating="4.3"
+        data-best="false"
+        data-emoji="☕"
+        data-image=""
+      >
+        <h3>Iced Americano</h3>
+        <p>Bold espresso over ice</p>
+      </article>
+      <article
+        class="product"
+        data-id="matcha-latte"
+        data-category="matcha"
+        data-price="129"
+        data-rating="4.8"
+        data-best="true"
+        data-emoji="🍵"
+        data-image=""
+      >
+        <h3>Matcha Latte</h3>
+        <p>Ceremonial matcha</p>
+      </article>
+      <article
+        class="product"
+        data-id="strawberry-matcha"
+        data-category="matcha"
+        data-price="145"
+        data-rating="4.6"
+        data-best="false"
+        data-emoji="🍵"
+        data-image=""
+      >
+        <h3>Strawberry Matcha</h3>
+        <p>Matcha over strawberry milk</p>
+      </article>
+      <article
+        class="product"
+        data-id="choco-hazelnut"
+        data-category="hot"
+        data-price="109"
+        data-rating="4.6"
+        data-best="false"
+        data-emoji="☕"
+        data-image="images/choco-hazelnut.jpg"
+      >
+        <h3>Choco Hazelnut</h3>
+        <p>Rich cocoa, nutty finish</p>
+      </article>
+      <article
+        class="product"
+        data-id="hot-milk-tea"
+        data-category="hot"
+        data-price="79"
+        data-rating="4.4"
+        data-best="false"
+        data-emoji="♨️"
+        data-image=""
+      >
+        <h3>Hot Milk Tea</h3>
+        <p>Warm, classic comfort</p>
+      </article>
+      <article
+        class="product"
+        data-id="cheesy-fries"
+        data-category="snack"
+        data-price="89"
+        data-rating="4.5"
+        data-best="false"
+        data-emoji="🍟"
+        data-image=""
+      >
+        <h3>Cheesy Fries</h3>
+        <p>Crispy fries, cheese sauce</p>
+      </article>
+      <article
+        class="product"
+        data-id="chicken-poppers"
+        data-category="snack"
+        data-price="109"
+        data-rating="4.6"
+        data-best="false"
+        data-emoji="🍗"
+        data-image=""
+      >
+        <h3>Chicken Poppers</h3>
+        <p>Bite-size crispy chicken</p>
+      </article>
+      <article
+        class="product"
+        data-id="choco-chip-cookie"
+        data-category="snack"
+        data-price="59"
+        data-rating="4.7"
+        data-best="false"
+        data-emoji="🍪"
+        data-image=""
+      >
+        <h3>Choco Chip Cookie</h3>
+        <p>Soft, chewy, freshly baked</p>
+      </article>
+    </section>
+
+    <script src="script.js"></script>
+
+    <!-- ===== FIREBASE: starts Firebase for this page (config lives in firebase-config.js) ===== -->
+    <script type="module" src="firebase-config.js"></script>
+  </body>
+</html>

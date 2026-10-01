@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#2b1a12" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="phase5.css" />
+    <title>Orders | KKOPI.Tea Admin</title>
+  </head>
+  <body data-page="orders" class="app">
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" id="sidebar" aria-label="Admin navigation">
+      <a class="logo" href="dashboardphase5.html"
+        >KKOPI<span>.Tea</span><small>Admin</small></a
+      >
+      <nav class="side-nav">
+        <a class="nav-link" href="dashboardphase5.html"
+          ><span aria-hidden="true">📊</span>Dashboard</a
+        ><a class="nav-link" href="productsphase5.html"
+          ><span aria-hidden="true">🥤</span>Products</a
+        ><a class="nav-link active" href="ordersphase5.html" aria-current="page"
+          ><span aria-hidden="true">🧾</span>Orders</a
+        ><a class="nav-link" href="customersphase5.html"
+          ><span aria-hidden="true">👥</span>Customers</a
+        ><a class="nav-link" href="reportsphase5.html"
+          ><span aria-hidden="true">📈</span>Reports</a
+        >
+      </nav>
+      <div class="side-foot">
+        <button class="nav-link logout" id="logoutBtn" type="button">
+          <span aria-hidden="true">🚪</span>Logout
+        </button>
+        <button class="reset" id="resetDemo" type="button">
+          Reset demo data
+        </button>
+      </div>
+    </aside>
+    <div class="scrim" id="scrim" hidden></div>
+
+    <div class="main">
+      <!-- ===== TOP NAVIGATION ===== -->
+      <header class="topbar">
+        <button
+          class="icon-btn menu-btn"
+          id="menuBtn"
+          type="button"
+          aria-label="Open menu"
+        >
+          ☰
+        </button>
+        <label class="search"
+          ><span aria-hidden="true">🔍</span
+          ><input
+            id="searchInput"
+            type="search"
+            placeholder="Search orders or customers..."
+            aria-label="Search"
+        /></label>
+        <div class="top-actions">
+          <div class="notif">
+            <button
+              class="icon-btn"
+              id="notifBtn"
+              type="button"
+              aria-label="Notifications"
+              aria-expanded="false"
+            >
+              🔔<span class="badge" id="notifCount" hidden>0</span>
+            </button>
+            <div class="notif-menu glass" id="notifMenu" hidden></div>
+          </div>
+          <div class="admin-chip">
+            <span class="avatar-sm" id="adminInitial">A</span
+            ><span class="admin-name" id="adminName">Admin</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="content">
+        <div class="page-head">
+          <h1>Orders</h1>
+          <div class="head-actions"></div>
+        </div>
+
+        <section class="panel glass">
+          <div
+            class="chips"
+            id="statusChips"
+            role="group"
+            aria-label="Filter by status"
+          ></div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Customer</th>
+                  <th>Products</th>
+                  <th>Qty</th>
+                  <th>Payment</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="orderRows"></tbody>
+            </table>
+          </div>
+          <p class="empty-row" id="emptyMsg" hidden>No orders found.</p>
+          <div class="pager" id="pager"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="phase5.js"></script>
+  </body>
+</html>

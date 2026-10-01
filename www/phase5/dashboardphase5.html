@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#2b1a12" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="phase5.css" />
+    <title>Dashboard | KKOPI.Tea Admin</title>
+  </head>
+  <body data-page="dashboard" class="app">
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" id="sidebar" aria-label="Admin navigation">
+      <a class="logo" href="dashboardphase5.html"
+        >KKOPI<span>.Tea</span><small>Admin</small></a
+      >
+      <nav class="side-nav">
+        <a
+          class="nav-link active"
+          href="dashboardphase5.html"
+          aria-current="page"
+          ><span aria-hidden="true">📊</span>Dashboard</a
+        ><a class="nav-link" href="productsphase5.html"
+          ><span aria-hidden="true">🥤</span>Products</a
+        ><a class="nav-link" href="ordersphase5.html"
+          ><span aria-hidden="true">🧾</span>Orders</a
+        ><a class="nav-link" href="customersphase5.html"
+          ><span aria-hidden="true">👥</span>Customers</a
+        ><a class="nav-link" href="reportsphase5.html"
+          ><span aria-hidden="true">📈</span>Reports</a
+        >
+      </nav>
+      <div class="side-foot">
+        <button class="nav-link logout" id="logoutBtn" type="button">
+          <span aria-hidden="true">🚪</span>Logout
+        </button>
+        <button class="reset" id="resetDemo" type="button">
+          Reset demo data
+        </button>
+      </div>
+    </aside>
+    <div class="scrim" id="scrim" hidden></div>
+
+    <div class="main">
+      <!-- ===== TOP NAVIGATION ===== -->
+      <header class="topbar">
+        <button
+          class="icon-btn menu-btn"
+          id="menuBtn"
+          type="button"
+          aria-label="Open menu"
+        >
+          ☰
+        </button>
+        <label class="search"
+          ><span aria-hidden="true">🔍</span
+          ><input
+            id="searchInput"
+            type="search"
+            placeholder="Search products..."
+            aria-label="Search"
+        /></label>
+        <div class="top-actions">
+          <div class="notif">
+            <button
+              class="icon-btn"
+              id="notifBtn"
+              type="button"
+              aria-label="Notifications"
+              aria-expanded="false"
+            >
+              🔔<span class="badge" id="notifCount" hidden>0</span>
+            </button>
+            <div class="notif-menu glass" id="notifMenu" hidden></div>
+          </div>
+          <div class="admin-chip">
+            <span class="avatar-sm" id="adminInitial">A</span
+            ><span class="admin-name" id="adminName">Admin</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="content">
+        <div class="page-head">
+          <h1>Dashboard</h1>
+          <div class="head-actions">
+            <a class="btn" href="productsphase5.html?add=1">+ Add Product</a>
+          </div>
+        </div>
+
+        <section class="cards" aria-label="Summary">
+          <div class="stat-card glass">
+            <span class="ico">🥤</span>
+            <div>
+              <p>Total Products</p>
+              <strong id="statProducts">0</strong>
+            </div>
+          </div>
+          <div class="stat-card glass">
+            <span class="ico">🧾</span>
+            <div>
+              <p>Total Orders</p>
+              <strong id="statOrders">0</strong>
+            </div>
+          </div>
+          <div class="stat-card glass">
+            <span class="ico">👥</span>
+            <div>
+              <p>Total Customers</p>
+              <strong id="statCustomers">0</strong>
+            </div>
+          </div>
+          <div class="stat-card glass">
+            <span class="ico">💰</span>
+            <div>
+              <p>Total Revenue</p>
+              <strong id="statRevenue">0</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel glass quick" aria-label="Quick actions">
+          <h2>Quick actions</h2>
+          <div class="quick-btns">
+            <a class="btn" href="productsphase5.html?add=1">+ Add Product</a>
+            <a class="btn btn-ghost" href="ordersphase5.html">View Orders</a>
+            <a class="btn btn-ghost" href="reportsphase5.html"
+              >Generate Reports</a
+            >
+          </div>
+        </section>
+
+        <div class="two-col">
+          <section class="panel glass">
+            <h2>Sales: last 7 days</h2>
+            <div class="chart" id="salesChart"></div>
+          </section>
+          <section class="panel glass">
+            <h2>Latest customers</h2>
+            <ul class="people" id="latestCustomers"></ul>
+          </section>
+        </div>
+
+        <section class="panel glass">
+          <div class="panel-head">
+            <h2>Recent orders</h2>
+            <a class="link" href="ordersphase5.html">View all</a>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Customer</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody id="recentOrders"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="phase5.js"></script>
+  </body>
+</html>

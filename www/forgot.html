@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Reset Password | KKOPI.Tea</title>
+  </head>
+  <body data-page="forgot">
+    <main class="auth">
+      <div class="auth-card glass">
+        <a class="logo" href="index.html">KKOPI<span>.Tea</span></a>
+        <h1>Reset your password</h1>
+        <p class="sub">We'll email you a link to set a new one.</p>
+        <div class="success" id="msg" role="status">
+          Reset link sent. Check your inbox. Returning to login...
+        </div>
+        <form id="forgotForm" novalidate>
+          <div class="field">
+            <label for="email">Email</label
+            ><input
+              id="email"
+              name="email"
+              type="email"
+              data-rule="email"
+              autocomplete="email"
+            />
+            <div class="error"></div>
+          </div>
+          <button class="btn btn-light btn-block" type="submit">
+            Send reset link
+          </button>
+        </form>
+        <p class="switch">
+          <a class="link" href="login.html">Back to login</a>
+        </p>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

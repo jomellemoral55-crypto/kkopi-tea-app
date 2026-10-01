@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#2b1a12" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="phase4.css" />
+    <!-- Apply saved dark mode before first paint (no flash) -->
+    <script>
+      try {
+        if (JSON.parse(localStorage.getItem('kkopi_settings')).dark)
+          document.documentElement.dataset.theme = 'dark';
+      } catch (e) {}
+    </script>
+    <title>Settings | KKOPI.Tea</title>
+  </head>
+  <body data-page="settings">
+    <header class="nav">
+      <div class="container nav-in">
+        <a class="logo" href="../home.html">KKOPI<span>.Tea</span></a>
+        <nav class="nav-links" aria-label="Main">
+          <a class="pill" href="../home.html">Home</a>
+          <a class="pill" href="../phase2/menuphase2.html">Menu</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="icon-btn" href="../phase3/cartphase3.html" aria-label="Cart"
+            >🛒<span class="badge" id="cartCount" hidden>0</span></a
+          >
+          <a
+            class="icon-btn active"
+            href="profilephase4.html"
+            aria-label="Profile"
+            >👤</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1 class="page-title">Settings</h1>
+      <nav class="tabs" aria-label="Account">
+        <a class="tab" href="profilephase4.html">Profile</a
+        ><a class="tab" href="favoritesphase4.html">Favorites</a
+        ><a class="tab" href="orderhistoryphase4.html">Orders</a
+        ><a class="tab active" href="settingsphase4.html" aria-current="page"
+          >Settings</a
+        >
+      </nav>
+
+      <section class="group glass" aria-labelledby="g1">
+        <h2 id="g1">Preferences</h2>
+        <div class="row">
+          <div>
+            <strong>Dark mode</strong><small>Easier on the eyes at night</small>
+          </div>
+          <label class="switch"
+            ><input
+              type="checkbox"
+              id="darkToggle"
+              role="switch"
+              aria-label="Dark mode" /><span></span
+          ></label>
+        </div>
+        <div class="row">
+          <div>
+            <strong>Order updates</strong
+            ><small>Notify me about my order status</small>
+          </div>
+          <label class="switch"
+            ><input
+              type="checkbox"
+              id="notifOrders"
+              role="switch"
+              aria-label="Order notifications" /><span></span
+          ></label>
+        </div>
+        <div class="row">
+          <div>
+            <strong>Promotions</strong
+            ><small>Deals, vouchers and new drinks</small>
+          </div>
+          <label class="switch"
+            ><input
+              type="checkbox"
+              id="notifPromos"
+              role="switch"
+              aria-label="Promotion notifications" /><span></span
+          ></label>
+        </div>
+        <div class="row">
+          <div>
+            <strong>Language</strong><small>More languages coming soon</small>
+          </div>
+          <select id="langSelect" aria-label="Language">
+            <option value="en">English</option>
+            <option value="fil">Filipino</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="group glass" aria-labelledby="g2">
+        <h2 id="g2">Account &amp; info</h2>
+        <button class="row row-btn" type="button" data-modal="security">
+          <div>
+            <strong>Account security</strong><small>Change your password</small>
+          </div>
+          <span aria-hidden="true">›</span>
+        </button>
+        <button class="row row-btn" type="button" data-modal="about">
+          <div><strong>About KKOPI.Tea</strong></div>
+          <span aria-hidden="true">›</span>
+        </button>
+        <button class="row row-btn" type="button" data-modal="privacy">
+          <div><strong>Privacy Policy</strong></div>
+          <span aria-hidden="true">›</span>
+        </button>
+        <button class="row row-btn" type="button" data-modal="terms">
+          <div><strong>Terms &amp; Conditions</strong></div>
+          <span aria-hidden="true">›</span>
+        </button>
+      </section>
+
+      <div class="footer-actions">
+        <button class="btn btn-danger" id="logoutBtn" type="button">
+          Logout
+        </button>
+      </div>
+    </main>
+
+    <script src="phase4.js"></script>
+  </body>
+</html>

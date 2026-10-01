@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Register | KKOPI.Tea</title>
+  </head>
+  <body data-page="register">
+    <main class="auth">
+      <div class="auth-card glass">
+        <a class="logo" href="index.html">KKOPI<span>.Tea</span></a>
+        <h1>Create your account</h1>
+        <p class="sub">Order faster and collect rewards.</p>
+        <form id="registerForm" novalidate>
+          <div class="field">
+            <label for="name">Full name</label
+            ><input
+              id="name"
+              name="name"
+              data-rule="name"
+              autocomplete="name"
+            />
+            <div class="error"></div>
+          </div>
+          <div class="field">
+            <label for="email">Email</label
+            ><input
+              id="email"
+              name="email"
+              type="email"
+              data-rule="email"
+              autocomplete="email"
+            />
+            <div class="error"></div>
+          </div>
+          <div class="field">
+            <label for="phone">Phone number</label
+            ><input
+              id="phone"
+              name="phone"
+              type="tel"
+              data-rule="phone"
+              autocomplete="tel"
+            />
+            <div class="error"></div>
+          </div>
+          <div class="field">
+            <label for="password">Password</label
+            ><input
+              id="password"
+              name="password"
+              type="password"
+              data-rule="password"
+              autocomplete="new-password"
+            />
+            <div class="error"></div>
+          </div>
+          <div class="field">
+            <label for="confirm">Confirm password</label
+            ><input
+              id="confirm"
+              name="confirm"
+              type="password"
+              data-rule="confirm"
+              autocomplete="new-password"
+            />
+            <div class="error"></div>
+          </div>
+          <button class="btn btn-light btn-block" type="submit">
+            Create account
+          </button>
+        </form>
+        <p class="switch">
+          Already have an account? <a class="link" href="login.html">Log in</a>
+        </p>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
