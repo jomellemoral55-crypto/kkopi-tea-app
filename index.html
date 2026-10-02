@@ -9,7 +9,7 @@
     />
     <meta name="theme-color" content="#2b1a12" />
 
-    <!-- AUTOMATIC REDIRECT PAPUNTANG home.html PAGKAPASOK SA BASE URL -->
+    <!-- AUTOMATIC REDIRECT PAPUNTANG home.html AFTER 2 SECONDS -->
     <meta http-equiv="refresh" content="2;url=home.html" />
 
     <title>KKOPI.Tea</title>
@@ -90,9 +90,9 @@
 
     <script src="script.js"></script>
     <script>
-      // Secondary JS fallback para siguradong lilipat sa home.html
+      // Siguradong lilipat sa home.html pagkatapos ng 2 seconds
       setTimeout(function () {
-        window.location.href = 'home.html';
+        window.location.replace('home.html');
       }, 2000);
     </script>
   </body>

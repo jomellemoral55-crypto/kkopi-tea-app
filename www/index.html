@@ -8,9 +8,13 @@
       content="KKOPI.Tea - milk tea and coffee, brewed your way."
     />
     <meta name="theme-color" content="#2b1a12" />
+
+    <!-- AUTOMATIC REDIRECT PAPUNTANG HOME.HTML PAGKAPASOK SA BASE URL -->
+    <meta http-equiv="refresh" content="2;url=Home.html" />
+
     <title>KKOPI.Tea</title>
 
-    <!-- Emoji favicon (no extra file needed) -->
+    <!-- Emoji favicon -->
     <link
       rel="icon"
       href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧋</text></svg>"
@@ -27,9 +31,9 @@
     <link rel="stylesheet" href="styles.css" />
 
     <!-- Fallback kung naka-off ang JavaScript -->
-    <noscript
-      ><meta http-equiv="refresh" content="3;url=login.html"
-    /></noscript>
+    <noscript>
+      <meta http-equiv="refresh" content="0;url=Home.html" />
+    </noscript>
   </head>
   <body data-page="splash">
     <main class="splash">
@@ -85,5 +89,11 @@
     </main>
 
     <script src="script.js"></script>
+    <script>
+      // Secondary JS fallback para siguradong lilipat sa Home.html
+      setTimeout(function () {
+        window.location.href = 'Home.html';
+      }, 2000);
+    </script>
   </body>
 </html>
